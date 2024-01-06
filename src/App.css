@@ -1,3 +1,37 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 30px auto;
+}
+
+span {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 50px;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  background-color: #fcf9f9;
+  border: 1px solid lightgrey;
+}
+
+button {
+  background-color: #574dcc;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  height: 50px;
+  margin-top: 25px;
+  border: none;
+  width: 100%;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -8,4 +42,29 @@
 form {
   display: flex;
   flex-direction: column;
+  width: 400px;
+}
+
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  margin: auto;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+  border-radius: 4px;
+  padding: 30px;
+  width: 100%;
+}
+
+.inactive {
+  display: none;
 }

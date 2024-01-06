@@ -1,12 +1,17 @@
-import { useState } from "react";
-
-const Form = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordVerif, setPasswordVerif] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-
+const Form = ({
+  name,
+  setName,
+  email,
+  setEmail,
+  password,
+  setPassword,
+  passwordVerif,
+  setPasswordVerif,
+  errorMessage,
+  setErrorMessage,
+  confirmation,
+  setConfirmation,
+}) => {
   const onChange = (event, target) => {
     if (target === "name") {
       setName(event.target.value);
@@ -25,9 +30,9 @@ const Form = () => {
       <form
         onSubmit={(event) => {
           event.preventDefault();
-          console.log(event);
-          password !== passwordVerif &&
-            setErrorMessage("Les mots de passe ne sont pas identiques");
+          password !== passwordVerif
+            ? setErrorMessage("Les mots de passe ne sont pas identiques")
+            : (setErrorMessage(""), setConfirmation(true));
         }}
       >
         <span>Name</span>
