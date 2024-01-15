@@ -18,7 +18,6 @@ function App() {
           name={name}
           email={email}
           password={password}
-          confirmation={confirmation}
           setConfirmation={setConfirmation}
         />
       ) : (

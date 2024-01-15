@@ -9,7 +9,6 @@ const Form = ({
   setPasswordVerif,
   errorMessage,
   setErrorMessage,
-  confirmation,
   setConfirmation,
 }) => {
   const onChange = (event, target) => {
@@ -30,9 +29,16 @@ const Form = ({
       <form
         onSubmit={(event) => {
           event.preventDefault();
-          password !== passwordVerif
-            ? setErrorMessage("Les mots de passe ne sont pas identiques")
-            : (setErrorMessage(""), setConfirmation(true));
+          if (
+            name !== "" &&
+            email !== "" &&
+            password !== "" &&
+            passwordVerif !== ""
+          ) {
+            password !== passwordVerif
+              ? setErrorMessage("Les mots de passe ne sont pas identiques")
+              : (setErrorMessage(""), setConfirmation(true));
+          }
         }}
       >
         <span>Name</span>
